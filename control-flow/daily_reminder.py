@@ -14,13 +14,10 @@ match priority:
     case "low":
         reminder = f"'{task}' is a low priority task"
     case _:
-        reminder = f"'{task}' has an unspecified priority level"
+        reminder = f"'{task}' is a task with unspecified priority"
 
 # Add time-bound condition
 if time_bound == "yes":
-    reminder += " that requires immediate attention today!"
+    print(f"Reminder: {reminder} that requires immediate attention today!")
 else:
-    reminder = "Note: " + reminder + ". Consider completing it when you have free time."
-
-# Print final reminder
-print("\nReminder:", reminder)
+    print(f"Note: {reminder}. Consider completing it when you have free time.")
